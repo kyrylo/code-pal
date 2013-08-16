@@ -1,0 +1,41 @@
+/* Strings */
+.S,
+.S .kwrd
+{
+    color:#2A00FF;
+    font-weight: normal;
+}
+/* Functions */
+.func{
+   
+}
+/* Comments */
+.C,
+.C .kwrd
+{
+    color:#3F7F5F;
+    font-weight: normal;
+}
+/* Keywords */
+.kwrd{
+    color: #7F0055;
+    font-weight: bold;
+}
+/* Regexp */
+.R{
+    color:gray
+} 
+/* Braces */
+.gly{
+    color:#787878; 
+    font-weight: bold;
+}
+.backlight{
+    background-color: yellow;
+    color: blue;
+    font-weight: bold;
+}
+.entity.variable .name
+{
+    color: brown;
+}

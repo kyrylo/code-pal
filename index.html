@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Java Code Editor</title>
+        <script type="text/javascript" src="js/helper.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
+        <script type="text/javascript" src="js/coder.js"></script>
+        <script type="text/javascript" src="js/rules.js"></script>
+        <script type="text/javascript" src="js/mystorage.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="js/parser.js"></script>
+        <script type="text/javascript" src="js/render.js"></script>
+        <script type="text/javascript" src="js/util/toggle.js"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link id="theme_load" href="theme/default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+    <div id="menu">
+        <div class="substrate" onclick="Menu.hide()"></div>
+        <div class="wrapper">
+            <div class="block info"></div>
+            <div class="block actives"></div>
+        </div>
+    </div>
+    <div id="comment" >
+        <div class="substrate" onclick="Comment.hide()"></div>
+        <div class="wrapper">
+            <div class="block title"></div>
+            <div class="block content">
+                <textarea class="text"></textarea>
+            </div>
+            <div class="block controls">
+                <span class="cancel" onclick="Comment.save()">Ok</span>
+                <span class="cancel" onclick="Comment.hide()">Cancel</span>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="controls">
+            <form>
+                <div class="left">
+                    <label for="your-files">Source Code upload</label>
+                    <input type="file" id="your-files">
+                    <br/>
+                    <label for="select-rule">Choose rule:</label>
+                    <select id="select-rule"></select>
+                </div>
+                <div class="right">
+                    <label for="theme_select">Choose theme</label>
+                    <select id="theme_select" onchange="getTheme()">
+                          <option value="default">Default</option>
+                          <option value="custom">Custom</option>
+                    </select>
+                    <br/>
+                    <label for="your-rule">Upload rules:</label>
+                    <input type="file" id="your-rule">
+                </div>
+                <div class="clear"></div>
+            </form>
+        </div>    
+        <h1>Java Code Editor</h1>
+        <div id="error_area" class="left"></div>
+        <div id="arrow" class="left">
+            <img class="left arrow" src="image/arrow_left.png" />
+        </div>
+        <div id="left_aside" class="left">
+            <div>
+            <div id="line_numbers" class="bcell">
+                <span class="line_num">1</span>
+            </div>
+            <div id="output_area" class="bcell"></div>
+            <div id="line_comment" class="bcell">
+                <span class="line_num">comment</span>
+            </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    </body>
+</html>

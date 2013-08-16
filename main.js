@@ -145,7 +145,7 @@ helper.addEvent(window,"load",function()
         link.setAttribute("src", file);
     }
 	document.getElementsByTagName("head")[0].appendChild(link)
-} 
+}
 
 function getTheme(){
     var theme = document.getElementById('theme_select').value;
@@ -272,66 +272,3 @@ var Comment = {
     }
 
 }
-
-
-//to delete later
-
-//function Syntax(code){
-////	var Blocks = Blocker();
-////    newCode = Blocks.blocking(code);
-////    newCode = Blocks.reblocking(newCode);
-////    console.log(newCode);
-//    var comments	= [];	// collect all comments
-//    var strings		= [];	// collect all strings
-//    var res			= [];	// collect all RegExp
-//    var all			= { 'C': comments, 'S': strings, 'R': res };
-//    var safe		= { '<': '<', '>': '>', '&': '&' };
-//    var keywords =	Config.keywords;
-//
-//    var keywords_regexp = new RegExp( '(?:[^\\$]){1}\\b(' + keywords + ')\\b' + '([^a-z0-9\$_])', 'gi');
-//
-//
-//    var test = code
-//        // Mask HTML
-//        .replace(/[<>&]/g, function (m)
-//        { return safe[m]; })
-//        // Remove comments
-//        .replace(/\/\*[\s\S]*?\*\//g, function(m)
-//        { var l=comments.length; comments.push(m); return '~~~C'+l+'~~~';   })
-//        .replace(/([^\\])\/\/[^\n]*\n/g, function(m, f)
-//        { var l=comments.length; comments.push(m); return f+'~~~C'+l+'~~~'; })
-//        // Remove regexp
-//        .replace(/\/(\\\/|[^\/\n])*\/[gim]{0,3}/g, function(m)
-//        { var l=res.length; res.push(m); return '~~~R'+l+'~~~';   })
-//        // Remove strings
-//        .replace(/([^\\])((?:'(?:\\'|[^'])*')|(?:"(?:\\"|[^"])*"))/g, function(m, f, s)
-//        { var l=strings.length; strings.push(s); return f+'~~~S'+l+'~~~'; })
-//        // emphasize keywords
-//        .replace(keywords_regexp,
-//            '<span class="kwrd"> $1</span>$2')
-//        // emphasize braces
-//        .replace(/(\{|\}|\]|\[|\|)/gi,
-//            '<span class="gly">$1</span>')
-//        // emphasize funct names
-//        .replace(
-//        /([a-z\_\$][a-z0-9_]*)[\s]*\(/gi,
-//        function(m, f, s)
-//        {
-//            return '<span class="func">'+f+'</span>(';
-//        }
-//    );
-//
-//
-////    console.log(test);
-//    code = test;
-//    return code
-//        // Return comments, strings, RegExp
-//        .replace(/~~~([CSR])(\d+)~~~/g, function(m, t, i)
-//        { return '<span class="'+t+'">'+all[t][i]+'</span>'; })
-//        // Set line breaks
-//        .replace(/\n/g,
-//            '<br/>')
-//        // Change Tab to ;&nbsp
-//        .replace(/\t/g,
-//            '&nbsp;&nbsp;&nbsp;&nbsp;');
-//}

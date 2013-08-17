@@ -1,4 +1,6 @@
-%w|bundler pathname logger fileutils|.each { |gem| require gem }
+%w|bundler pathname logger fileutils sprockets-sass|.each do |gem|
+  require gem
+end
 
 Bundler.require
 
@@ -20,6 +22,6 @@ task :compile do
     assets = sprockets.find_asset(bundle)
     prefix, basename = assets.pathname.to_s.split('/')[-2..-1]
     FileUtils.mkpath(COMPILED_DIR.join(prefix))
-    assets.write_to(COMPILED_DIR.join(prefix, basename))
+    assets.write_to(COMPILED_DIR.join(prefix, basename.chomp('.sass')))
   end
 end

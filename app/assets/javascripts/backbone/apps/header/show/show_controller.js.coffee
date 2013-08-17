@@ -3,4 +3,8 @@
   Show.Controller =
 
     showHeader: ->
-      console.log 'inside show'
+      headerView = @getHeaderView()
+      App.headerRegion.show headerView
+
+    getHeaderView: ->
+      new Show.Header

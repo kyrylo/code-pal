@@ -12,6 +12,11 @@ APP_DIR = ROOT.join('app', 'assets')
 task :compile do
   sprockets = Sprockets::Environment.new(ROOT) do |env|
     env.logger = Logger.new(STDOUT)
+    env.context_class.class_eval do
+      def asset_path(path, options = {})
+        "app/assets/#{path}"
+      end
+    end
   end
 
   %w|javascripts stylesheets|.each do |dir|

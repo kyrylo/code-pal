@@ -5,6 +5,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    eco (1.0.0)
+      coffee-script
+      eco-source
+      execjs
+    eco-source (1.1.0.rc.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
     hike (1.2.3)
@@ -27,5 +32,6 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-script
+  eco
   sprockets
   therubyracer

@@ -2,6 +2,8 @@
 //= require lib/underscore/underscore
 //= require lib/backbone/backbone
 //= require lib/marionette/lib/backbone.marionette
+//= require backbone/app
+//= require_tree ./backbone/apps/header
 
 
 // require helper

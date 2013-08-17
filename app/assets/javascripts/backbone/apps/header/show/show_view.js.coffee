@@ -2,3 +2,7 @@
 
   class Show.Header extends Marionette.ItemView
     template: 'header/show/templates/show_header'
+
+    id: 'header'
+
+    className: 'navbar'

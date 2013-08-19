@@ -1,12 +1,13 @@
 //= require lib/jquery/jquery
 //= require lib/underscore/underscore
 //= require lib/backbone/backbone
+//= require lib/marionette/lib/backbone.marionette
 //= require lib/bootstrap/dist/js/bootstrap
 
-//= require lib/marionette/lib/backbone.marionette
 //= require_tree ./backbone/config
 //= require backbone/app
 //= require_tree ./backbone/apps/header
+//= require_tree ./backbone/apps/workspace
 
 
 // require helper

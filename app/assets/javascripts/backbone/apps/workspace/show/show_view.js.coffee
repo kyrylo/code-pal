@@ -1,4 +1,18 @@
 @CodePal.module 'WorkspaceApp.Show', (Show, App, Backbone, Marionette, $, _) ->
 
-  class Show.Workspace extends Marionette.ItemView
-    template: 'workspace/show/templates/workspace'
+  class Show.Layout extends Marionette.Layout
+    template: 'workspace/show/templates/layout'
+
+    regions:
+      structureRegion: '#structure-region'
+      codeRegion:      '#code-region'
+      tweakingRegion:  '#tweaking-region'
+
+  class Show.Structure extends Marionette.ItemView
+    template: 'workspace/show/templates/_structure'
+
+  class Show.Code extends Marionette.ItemView
+    template: 'workspace/show/templates/_code'
+
+  class Show.Tweaking extends Marionette.ItemView
+    template: 'workspace/show/templates/_tweaking'

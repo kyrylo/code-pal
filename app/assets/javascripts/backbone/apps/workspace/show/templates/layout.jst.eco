@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+      <div id="structure-region"></div>
+    </div>
+
+    <div class="span9">
+      <div id="code-region"></div>
+    </div>
+  </div>
+</div>

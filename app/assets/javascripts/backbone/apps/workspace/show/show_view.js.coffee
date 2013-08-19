@@ -7,6 +7,7 @@
       structureRegion: '#structure-region'
       codeRegion:      '#code-region'
       tweakingRegion:  '#tweaking-region'
+      textRegion:      '#text-region'
 
   class Show.Structure extends Marionette.ItemView
     template: 'workspace/show/templates/_structure'
@@ -16,3 +17,7 @@
 
   class Show.Tweaking extends Marionette.ItemView
     template: 'workspace/show/templates/_tweaking'
+    id: 'tweaking'
+
+  class Show.Text extends Marionette.ItemView
+    template: 'workspace/show/templates/_text'

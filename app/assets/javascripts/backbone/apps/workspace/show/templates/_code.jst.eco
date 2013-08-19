@@ -1,5 +1,13 @@
-<div class="row">
-  <div class="span12">
-    <div id="tweaking-region"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="span12">
+      <div id="tweaking-region"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span12">
+      <div id="text-region"></div>
+    </div>
   </div>
 </div>

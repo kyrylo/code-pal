@@ -9,6 +9,7 @@
         @structureRegion()
         @codeRegion()
         @tweakingRegion()
+        @textRegion()
 
       App.mainRegion.show @layout
 
@@ -24,6 +25,10 @@
       tweakingView = @getTweakingView()
       @layout.tweakingRegion.show tweakingView
 
+    textRegion: ->
+      textView = @getTextView()
+      @layout.textRegion.show textView
+
     getStructureView: ->
       new Show.Structure
 
@@ -32,6 +37,9 @@
 
     getTweakingView: ->
       new Show.Tweaking
+
+    getTextView: ->
+      new Show.Text
 
     getLayoutView: ->
       new Show.Layout
